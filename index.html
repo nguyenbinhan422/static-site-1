@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turkey Tour 2026</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --bg-soft: #e8edf5;
+      --panel: rgba(255, 255, 255, 0.84);
+      --panel-strong: rgba(255, 255, 255, 0.96);
+      --text: #18212d;
+      --muted: #617187;
+      --accent: #6b8baa;
+      --accent-deep: #34506d;
+      --accent-soft: #dce6f0;
+      --sea: #4a7898;
+      --ok: #2c7a6b;
+      --line: rgba(93, 117, 145, 0.16);
+      --shadow: 0 18px 48px rgba(31, 46, 69, 0.1);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max-width: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(180deg, rgba(247, 249, 252, 0.84) 0%, rgba(239, 243, 248, 0.9) 52%, rgba(245, 247, 251, 0.94) 100%),
+        radial-gradient(circle at top left, rgba(113, 154, 193, 0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(207, 219, 234, 0.46), transparent 30%),
+        url("assets/images/oludeniz-lagoon.jpg") center top / cover fixed no-repeat,
+        linear-gradient(180deg, #f7f9fc 0%, #eff3f8 52%, #f5f7fb 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      width: 34rem;
+      height: 34rem;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(24px);
+      opacity: 0.32;
+    }
+
+    body::before {
+      top: -10rem;
+      left: -8rem;
+      background: rgba(122, 157, 194, 0.16);
+    }
+
+    body::after {
+      bottom: -12rem;
+      right: -10rem;
+      background: rgba(178, 197, 218, 0.2);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(var(--max-width), calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .hero,
+    .panel {
+      background: var(--panel);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      padding: 30px;
+      display: grid;
+      gap: 24px;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.82), rgba(234, 240, 247, 0.92)),
+        radial-gradient(circle at 10% 0%, rgba(116, 155, 194, 0.18), transparent 28%),
+        radial-gradient(circle at 100% 0%, rgba(82, 121, 160, 0.1), transparent 24%);
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.92fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(107, 139, 170, 0.08);
+      border: 1px solid rgba(107, 139, 170, 0.14);
+      color: var(--accent-deep);
+      font-size: 0.76rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 16px 0 14px;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      line-height: 0.98;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      max-width: 10ch;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 44rem;
+      font-size: 1rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 14px;
+      align-content: stretch;
+    }
+
+    .meta-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(244, 248, 252, 0.9));
+      border: 1px solid rgba(217, 228, 239, 0.88);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+    }
+
+    .meta-card .label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .meta-card span {
+      color: var(--muted);
+      line-height: 1.55;
+      display: block;
+    }
+
+    .scroll-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .hero-action,
+    .section-link,
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(103, 131, 162, 0.18);
+      background: rgba(255, 255, 255, 0.84);
+      color: var(--accent-deep);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .hero-action:hover,
+    .section-link:hover,
+    .map-link:hover {
+      transform: translateY(-1px);
+      background: #ffffff;
+      border-color: rgba(103, 131, 162, 0.3);
+    }
+
+    .hero-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hero-summary-card {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(249, 251, 254, 0.92);
+      border: 1px solid rgba(216, 226, 237, 0.92);
+    }
+
+    .hero-summary-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent-deep);
+      font-size: 1.1rem;
+    }
+
+    .hero-summary-card span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .hero-spotlight {
+      display: grid;
+      gap: 14px;
+      padding: 20px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(245, 249, 253, 0.95), rgba(239, 244, 250, 0.92));
+      border: 1px solid rgba(214, 225, 236, 0.9);
+    }
+
+    .hero-spotlight h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .hero-spotlight p,
+    .hero-spotlight li {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .hero-spotlight ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .mini-kpis {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .mini-kpi {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(219, 228, 237, 0.92);
+    }
+
+    .mini-kpi strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent-deep);
+      font-size: 1.15rem;
+    }
+
+    .mini-kpi span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .section {
+      margin-top: 22px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      letter-spacing: -0.04em;
+    }
+
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 44rem;
+      line-height: 1.6;
+    }
+
+    .panel {
+      border-radius: 26px;
+      padding: 26px 28px;
+    }
+
+    .overview-grid,
+    .flight-grid,
+    .prep-grid,
+    .stats-grid,
+    .location-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .overview-grid,
+    .stats-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .flight-grid,
+    .location-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stay-grid,
+    .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .overview-card,
+    .stat-card,
+    .flight-card,
+    .prep-card,
+    .stay-card,
+    .timeline-card,
+    .location-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .overview-card::before,
+    .stat-card::before,
+    .flight-card::before,
+    .prep-card::before,
+    .stay-card::before,
+    .timeline-card::before,
+    .location-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, rgba(96, 132, 167, 0.95), rgba(149, 176, 201, 0.42));
+    }
+
+    .overview-card h3,
+    .flight-card h3,
+    .prep-card h3,
+    .stay-card h3,
+    .location-top h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    .overview-card p,
+    .flight-card p,
+    .prep-card p,
+    .stay-card p,
+    .timeline-copy p,
+    .location-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 20px 16px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--accent-deep);
+      margin-bottom: 6px;
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .route-bar,
+    .section-nav,
+    .flight-tags,
+    .timeline-meta,
+    .transfer-strip,
+    .map-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .route-bar {
+      margin-top: 18px;
+    }
+
+    .route-pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(107, 139, 170, 0.08);
+      border: 1px solid rgba(107, 139, 170, 0.16);
+      color: var(--accent-deep);
+      font-size: 0.92rem;
+    }
+
+    .section-link {
+      padding: 9px 13px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .flight-route {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin: 14px 0;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .airport {
+      flex: 1;
+    }
+
+    .airport strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .airport span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+      display: block;
+    }
+
+    .arrow {
+      font-size: 1.35rem;
+      color: var(--accent);
+    }
+
+    .flight-tags {
+      margin-top: 14px;
+    }
+
+    .tag,
+    .timeline-meta span,
+    .transfer-chip,
+    .location-badge {
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      border: 1px solid rgba(95, 117, 145, 0.14);
+    }
+
+    .tag,
+    .timeline-meta span,
+    .location-badge {
+      background: rgba(107, 139, 170, 0.08);
+      color: var(--accent-deep);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 18px;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(107, 139, 170, 0.5), rgba(107, 139, 170, 0.08));
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: rise 0.8s ease forwards;
+      animation-delay: calc(var(--delay) * 90ms);
+    }
+
+    .timeline-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #86a9c7, #547596);
+      box-shadow: 0 10px 20px rgba(73, 101, 133, 0.2);
+      margin-top: 8px;
+      border: 4px solid rgba(246, 249, 253, 0.95);
+    }
+
+    .timeline-card {
+      border-radius: 24px;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 255, 0.95));
+    }
+
+    .timeline-card-inner {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+    }
+
+    .timeline-banner {
+      position: relative;
+      min-height: 196px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      isolation: isolate;
+    }
+
+    .timeline-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10, 20, 32, 0.08), rgba(10, 20, 32, 0.5)),
+        linear-gradient(135deg, rgba(52, 80, 109, 0.26), rgba(52, 80, 109, 0.02) 58%);
+      z-index: 0;
+    }
+
+    .timeline-banner-copy {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: end;
+      color: #f8fbff;
+      z-index: 1;
+    }
+
+    .timeline-scene {
+      display: grid;
+      gap: 6px;
+      max-width: 22rem;
+    }
+
+    .timeline-scene strong {
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .timeline-scene span {
+      font-size: 0.83rem;
+      line-height: 1.45;
+      color: rgba(248, 251, 255, 0.84);
+    }
+
+    .timeline-banner-credit {
+      font-size: 0.74rem;
+      color: rgba(248, 251, 255, 0.74);
+      text-align: right;
+      max-width: 10rem;
+    }
+
+    .timeline-banner-credit a {
+      color: inherit;
+    }
+
+    .day-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: -2px;
+    }
+
+    .day-gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid rgba(208, 220, 232, 0.72);
+      min-height: 116px;
+      background: linear-gradient(180deg, rgba(236, 242, 248, 0.92), rgba(246, 250, 254, 0.96));
+    }
+
+    .day-gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .timeline-top,
+    .location-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .timeline-top h3 {
+      margin: 0;
+      font-size: 1.24rem;
+    }
+
+    .date-badge {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(107, 139, 170, 0.08);
+      color: var(--accent-deep);
+      font-size: 0.9rem;
+      border: 1px solid rgba(107, 139, 170, 0.15);
+      white-space: nowrap;
+    }
+
+    .timeline-meta {
+      margin-bottom: 12px;
+    }
+
+    .timeline-copy {
+      display: grid;
+      gap: 14px;
+    }
+
+    .day-flow {
+      display: grid;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 20px;
+      background:
+        linear-gradient(180deg, rgba(245, 249, 253, 0.96), rgba(250, 252, 255, 0.92)),
+        repeating-linear-gradient(
+          90deg,
+          rgba(95, 117, 145, 0.05) 0,
+          rgba(95, 117, 145, 0.05) 1px,
+          transparent 1px,
+          transparent 72px
+        );
+      border: 1px solid rgba(95, 117, 145, 0.14);
+    }
+
+    .flow-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .flow-header strong {
+      font-size: 0.98rem;
+      letter-spacing: 0.03em;
+      color: var(--accent-deep);
+    }
+
+    .flow-header span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .flow-track,
+    .location-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .flow-node {
+      display: grid;
+      grid-template-columns: 128px minmax(0, 1fr);
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(95, 117, 145, 0.1);
+      align-items: center;
+      position: relative;
+    }
+
+    .flow-node::before {
+      content: "";
+      position: absolute;
+      left: 118px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(96, 132, 167, 0.24), rgba(96, 132, 167, 0));
+    }
+
+    .flow-time {
+      font-size: 0.92rem;
+      color: var(--accent-deep);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .flow-place {
+      display: grid;
+      gap: 3px;
+    }
+
+    .flow-place strong,
+    .location-list strong {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .flow-place span,
+    .location-list span {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .transfer-chip {
+      background: rgba(74, 120, 152, 0.08);
+      color: var(--sea);
+      border-color: rgba(74, 120, 152, 0.18);
+    }
+
+    .day-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .day-summary div,
+    .location-list div {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(245, 248, 252, 0.92);
+      border: 1px solid rgba(218, 227, 237, 0.88);
+    }
+
+    .day-summary strong {
+      display: block;
+      color: var(--accent-deep);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .day-summary span {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 0.9rem;
+    }
+
+    .stay-card ul,
+    .prep-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      min-height: 300px;
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, rgba(96, 132, 167, 0.95), rgba(149, 176, 201, 0.42));
+      z-index: 2;
+    }
+
+    .photo-visual {
+      position: relative;
+      min-height: 210px;
+      background:
+        radial-gradient(circle at top left, rgba(121, 160, 198, 0.32), transparent 28%),
+        linear-gradient(160deg, #e9eef5, #dce6f0 55%, #eef4fa 100%);
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .photo-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-placeholder {
+      width: calc(100% - 28px);
+      margin: 14px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px dashed rgba(96, 132, 167, 0.28);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .photo-copy {
+      padding: 18px;
+      display: grid;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo-copy h3 {
+      margin: 0;
+      font-size: 1.02rem;
+    }
+
+    .photo-copy p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.92rem;
+    }
+
+    .photo-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .photo-meta span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(107, 139, 170, 0.08);
+      color: var(--accent-deep);
+      border: 1px solid rgba(107, 139, 170, 0.16);
+      font-size: 0.84rem;
+    }
+
+    .photo-attribution {
+      margin-top: 4px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .photo-attribution a {
+      color: var(--accent-deep);
+    }
+
+    .api-note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(245, 248, 252, 0.92);
+      border: 1px solid rgba(218, 227, 237, 0.88);
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      padding: 20px;
+      font-size: 0.92rem;
+    }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        padding: 24px;
+      }
+
+      .hero-grid,
+      .hero-summary,
+      .overview-grid,
+      .stats-grid,
+      .flight-grid,
+      .photo-grid,
+      .stay-grid,
+      .prep-grid,
+      .day-summary,
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 1rem, var(--max-width));
+        padding-top: 12px;
+      }
+
+      .hero h1 {
+        max-width: none;
+      }
+
+      .timeline-item {
+        grid-template-columns: 42px 1fr;
+      }
+
+      .timeline::before {
+        left: 14px;
+      }
+
+      .timeline-dot {
+        width: 28px;
+        height: 28px;
+      }
+
+      .timeline-banner {
+        min-height: 170px;
+      }
+
+      .timeline-banner-copy {
+        display: grid;
+        justify-content: start;
+      }
+
+      .day-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .flight-route {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .flow-node {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .flow-node::before {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Turkey Tour 2026 &bull; Cleaner dashboard brief</div>
+          <h1>Turkey Tour<br>23 Apr - 4 May</h1>
+          <p>
+            A cleaner road-and-air itinerary for the full route from Ho Chi Minh City to Kuala Lumpur, Istanbul, Cappadocia, Kas, Fethiye, and back home, organized for fast scanning instead of long reading.
+          </p>
+          <div class="hero-actions">
+            <a class="hero-action" href="#overview">Trip overview</a>
+            <a class="hero-action" href="#location-intelligence">Location notes</a>
+            <a class="hero-action" href="#daily-schedule">Daily timeline</a>
+            <a class="hero-action" href="#stays">Stays</a>
+          </div>
+          <div class="hero-summary">
+            <div class="hero-summary-card">
+              <strong>Core rhythm</strong>
+              <span>City arrival, inland valleys, then a long coastal finish with car-heavy transitions.</span>
+            </div>
+            <div class="hero-summary-card">
+              <strong>Planning bias</strong>
+              <span>Long transfers are buffered so each day feels usable, not overpromised.</span>
+            </div>
+            <div class="hero-summary-card">
+              <strong>Maps-ready</strong>
+              <span>Main bases and route anchors now include quick Google Maps actions and locality notes.</span>
+            </div>
+          </div>
+          <div class="scroll-note">Use the overview for the route, the location section for map context, and the day cards for start and finish windows.</div>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-spotlight">
+            <h3>Trip control panel</h3>
+            <p>The plan is built around three friction points: airport-to-city transfer on arrival, the Cappadocia to Kas overland move, and the Ka&#351; to Fethiye activity stack.</p>
+            <ul>
+              <li>Front-load city icons while energy is highest in Istanbul.</li>
+              <li>Protect the Ka&#351; and Fethiye coast days from spillover delays.</li>
+              <li>Keep the final Istanbul day on the Asia side to reduce airport stress.</li>
+            </ul>
+            <div class="mini-kpis">
+              <div class="mini-kpi">
+                <strong>10h+</strong>
+                <span>Longest realistic road day on the Cappadocia to Ka&#351; transfer.</span>
+              </div>
+              <div class="mini-kpi">
+                <strong>4 legs</strong>
+                <span>Confirmed flights remain separated from local touring blocks.</span>
+              </div>
+            </div>
+          </div>
+          <div class="meta-card">
+            <div class="label">Travel Window</div>
+            <strong>23 Apr 2026 &rarr; 4 May 2026</strong>
+            <span>12 days across Malaysia transit, Turkey cities, inland valleys, and coastal drives.</span>
+          </div>
+          <div class="meta-card">
+            <div class="label">Destinations</div>
+            <strong>KL &bull; Istanbul &bull; Cappadocia &bull; Kas &bull; Fethiye</strong>
+            <span>Europe side, Asia side, balloon valleys, Mediterranean towns, and island waters.</span>
+          </div>
+          <div class="meta-card">
+            <div class="label">Trip Mood</div>
+            <strong>Scenic, photo-friendly, and drive-heavy</strong>
+            <span>Mix of city icons, markets, mosques, viewpoints, beaches, ferry rides, and long overland stretches.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel" id="overview">
+      <div class="section-header">
+        <div>
+          <h2>Trip Overview</h2>
+        </div>
+        <p>High-level summary of timing, route, and travel rhythm.</p>
+      </div>
+      <div class="section-nav">
+        <a class="section-link" href="#flights">Flights</a>
+        <a class="section-link" href="#location-intelligence">Location intelligence</a>
+        <a class="section-link" href="#daily-schedule">Day timelines</a>
+        <a class="section-link" href="#stays">Stays</a>
+        <a class="section-link" href="#prep">Preparation</a>
+      </div>
+      <div class="overview-grid">
+        <article class="overview-card">
+          <h3>Travel Rhythm</h3>
+          <p>One night in Kuala Lumpur outbound, one long-haul into Istanbul, then a route that shifts from city icons to Cappadocia landscapes and finally to the Mediterranean coast.</p>
+        </article>
+        <article class="overview-card">
+          <h3>Main Focus</h3>
+          <p>Istanbul landmarks, Cappadocia balloon mornings, Kas island time, Fethiye sea-and-sky experiences, then a softer Asia-side final day before flying out.</p>
+        </article>
+        <article class="overview-card">
+          <h3>Style</h3>
+          <p>Best suited for travelers who want good photos, memorable viewpoints, flexible optional experiences, and a clear view of how each day actually moves.</p>
+        </article>
+        <article class="overview-card">
+          <h3>Practical Note</h3>
+          <p>Several days depend on car transfers. The estimated timelines below add buffer so the long road sections feel realistic instead of overstuffed.</p>
+        </article>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>12</strong>
+          <span>Total calendar days</span>
+        </div>
+        <div class="stat-card">
+          <strong>5</strong>
+          <span>Main destination zones</span>
+        </div>
+        <div class="stat-card">
+          <strong>4</strong>
+          <span>Flight legs confirmed</span>
+        </div>
+        <div class="stat-card">
+          <strong>3</strong>
+          <span>Drive-heavy touring days</span>
+        </div>
+      </div>
+      <div class="route-bar">
+        <div class="route-pill">HCMC &rarr; Kuala Lumpur</div>
+        <div class="route-pill">Kuala Lumpur &rarr; Istanbul (SAW)</div>
+        <div class="route-pill">Istanbul &rarr; Cappadocia</div>
+        <div class="route-pill">Cappadocia &rarr; Kas</div>
+        <div class="route-pill">Kas &rarr; Fethiye</div>
+        <div class="route-pill">Fethiye &rarr; Istanbul</div>
+        <div class="route-pill">Istanbul &rarr; Kuala Lumpur</div>
+        <div class="route-pill">Kuala Lumpur &rarr; HCMC</div>
+      </div>
+    </section>
+
+    <section class="section panel" id="location-intelligence">
+      <div class="section-header">
+        <div>
+          <h2>Location Intelligence</h2>
+        </div>
+        <p>Useful place context and quick map actions for the main bases and route anchors, using Google Maps URL patterns so the links stay lightweight and practical.</p>
+      </div>
+      <div class="location-grid">
+        <article class="location-card">
+          <div class="location-top">
+            <h3>Istanbul Arrival Logic</h3>
+            <span class="location-badge">SAW &rarr; Taksim</span>
+          </div>
+          <p>The first Istanbul evening is best treated as one compact westbound city sweep. SAW is on the Asian side, so the handoff to Taksim is your main arrival friction point, not sightseeing density.</p>
+          <div class="location-list">
+            <div>
+              <strong>Best planning use</strong>
+              <span>Keep the first-night route narrow: hotel drop, Taksim, Istiklal, then Galata.</span>
+            </div>
+            <div>
+              <strong>Why this helps</strong>
+              <span>It protects the next full city day and avoids turning the airport arrival into a sprawling crossing schedule.</span>
+            </div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Istanbul+Sabiha+Gokcen+International+Airport&amp;destination=Taksim+Square+Istanbul&amp;travelmode=driving&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=directions_request" target="_blank" rel="noreferrer">SAW to Taksim</a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Galata+Tower+Istanbul&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=place_details_search" target="_blank" rel="noreferrer">Galata Tower</a>
+          </div>
+        </article>
+
+        <article class="location-card">
+          <div class="location-top">
+            <h3>Historic Core Cluster</h3>
+            <span class="location-badge">Walk-heavy day</span>
+          </div>
+          <p>Sultanahmet, the bazaars, and Balat read better as one anchored old-city day rather than separate destination blocks. The layout below already reflects that by compressing internal movement and leaving one cleaner westbound shift.</p>
+          <div class="location-list">
+            <div>
+              <strong>Natural anchor</strong>
+              <span>Hagia Sophia and the Blue Mosque establish the day before the market sequence.</span>
+            </div>
+            <div>
+              <strong>Best late-day move</strong>
+              <span>Save Balat for the softer photo walk once the main landmark queue pressure is gone.</span>
+            </div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hagia+Sophia+Istanbul&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=place_details_search" target="_blank" rel="noreferrer">Hagia Sophia</a>
+            <a class="map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hagia+Sophia+Istanbul&amp;destination=Balat+Istanbul&amp;travelmode=driving&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=directions_request" target="_blank" rel="noreferrer">Historic core to Balat</a>
+          </div>
+        </article>
+
+        <article class="location-card">
+          <div class="location-top">
+            <h3>Cappadocia Touring Base</h3>
+            <span class="location-badge">Goreme / Uchisar arc</span>
+          </div>
+          <p>Cappadocia works best as a compact loop of short scenic drives around Goreme, Pasabag, Uchisar, and the main viewpoints, with one broader southbound day for Soganli and Kaymakli.</p>
+          <div class="location-list">
+            <div>
+              <strong>Good local split</strong>
+              <span>Use one day for north-and-central valleys, then a separate day for the underground city and southern drive.</span>
+            </div>
+            <div>
+              <strong>What to avoid</strong>
+              <span>Mixing the southbound loop into the balloon-highlight day usually makes the schedule feel rushed.</span>
+            </div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Goreme+Turkey&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=place_details_search" target="_blank" rel="noreferrer">Goreme base</a>
+            <a class="map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Goreme+Turkey&amp;destination=Kaymakli+Underground+City&amp;travelmode=driving&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=directions_request" target="_blank" rel="noreferrer">Goreme to Kaymakli</a>
+          </div>
+        </article>
+
+        <article class="location-card">
+          <div class="location-top">
+            <h3>Ka&#351; and Fethiye Coast</h3>
+            <span class="location-badge">Road + sea stack</span>
+          </div>
+          <p>The coast reads as two different modes: Ka&#351; for decompression and water access, then Oludeniz and Fethiye for a denser activity day. Keeping that difference visible helps the trip feel balanced.</p>
+          <div class="location-list">
+            <div>
+              <strong>Ka&#351; role</strong>
+              <span>Recovery base after the longest inland transfer, with easier local movement and slower pace.</span>
+            </div>
+            <div>
+              <strong>Fethiye role</strong>
+              <span>More active routing day, where paragliding and private boat timing decide how much else fits.</span>
+            </div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Kas+Turkey&amp;destination=Oludeniz+Beach+Turkey&amp;travelmode=driving&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=directions_request" target="_blank" rel="noreferrer">Ka&#351; to Oludeniz</a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Butterfly+Valley+Fethiye&amp;utm_source=TurkeyTrip2026&amp;utm_campaign=place_details_search" target="_blank" rel="noreferrer">Butterfly Valley</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel" id="photo-highlights">
+      <div class="section-header">
+        <div>
+          <h2>Photo Highlights</h2>
+        </div>
+          <p>Destination imagery is now built in so the itinerary feels less text-heavy, with the option to upgrade these cards to Google place photos later.</p>
+      </div>
+      <div class="photo-grid">
+          <article class="photo-card" data-place-id="" data-place-name="Hagia Sophia Istanbul" data-photo-max-height="720" data-fallback-image="assets/images/istanbul-hagia-02.jpg" data-fallback-credit="Mehmet Turgut Kirkgoz on Pexels" data-fallback-credit-url="https://www.pexels.com/photo/hagia-sophia-in-istanbul-15228938/">
+          <div class="photo-visual">
+            <div class="photo-placeholder">Google place photo slot for Hagia Sophia. This will populate automatically when a valid Google Maps API key and place ID are provided.</div>
+          </div>
+          <div class="photo-copy">
+            <h3>Istanbul Landmark Mood</h3>
+            <div class="photo-meta">
+              <span>Historic core</span>
+              <span>Best on 25 Apr</span>
+            </div>
+            <p>Use this slot for a strong visual anchor tied to the old-city day, ideally a photo from Hagia Sophia or the Sultanahmet area.</p>
+            <div class="photo-attribution"></div>
+          </div>
+        </article>
+
+          <article class="photo-card" data-place-id="" data-place-name="Goreme Turkey" data-photo-max-height="720" data-fallback-image="assets/images/cappadocia-02.jpg" data-fallback-credit="Sezer Kucukertugrul on Pexels" data-fallback-credit-url="https://www.pexels.com/photo/hot-air-balloons-over-cappadocia-20334591/">
+          <div class="photo-visual">
+            <div class="photo-placeholder">Google place photo slot for Goreme / Cappadocia. This is designed for valley or cave-town imagery once Places photo data is wired.</div>
+          </div>
+          <div class="photo-copy">
+            <h3>Cappadocia Texture</h3>
+            <div class="photo-meta">
+              <span>Valley base</span>
+              <span>Best on 26 to 28 Apr</span>
+            </div>
+            <p>Use this slot for the cave landscape and balloon-region feel so the inland stretch breaks up the city and coast visually.</p>
+            <div class="photo-attribution"></div>
+          </div>
+        </article>
+
+          <article class="photo-card" data-place-id="" data-place-name="Oludeniz Beach Turkey" data-photo-max-height="720" data-fallback-image="assets/images/oludeniz-lagoon.jpg" data-fallback-credit="Ozan Aldemir on Pexels" data-fallback-credit-url="https://www.pexels.com/photo/breathtaking-aerial-view-of-oludeniz-lagoon-34776254/">
+            <div class="photo-visual">
+              <div class="photo-placeholder">Google place photo slot for Oludeniz or Butterfly Valley. This is intended as the sea-and-sky counterweight to the city and valley sections.</div>
+            </div>
+            <div class="photo-copy">
+            <h3>Coastal Finish</h3>
+            <div class="photo-meta">
+              <span>Sea day</span>
+              <span>Best on 1 May</span>
+            </div>
+            <p>Use this slot for lagoon, cliff, or coastal-water imagery that matches the Fethiye and Oludeniz part of the itinerary.</p>
+              <div class="photo-attribution"></div>
+            </div>
+          </article>
+
+          <article class="photo-card" data-place-id="" data-place-name="Kuala Lumpur Skyline" data-photo-max-height="720" data-fallback-image="assets/images/kl-skyline.jpg" data-fallback-credit="Visual Works on Pexels" data-fallback-credit-url="https://www.pexels.com/photo/kuala-lumpur-skyline-featuring-petronas-towers-32286568/">
+            <div class="photo-visual">
+              <div class="photo-placeholder">Kuala Lumpur skyline card for the transit bookends of the route.</div>
+            </div>
+            <div class="photo-copy">
+              <h3>Transit City Frame</h3>
+              <div class="photo-meta">
+                <span>KL layover</span>
+                <span>23 Apr and 4 May</span>
+              </div>
+              <p>A stronger visual marker for the Malaysia connection days so the trip has a clear opening and closing frame.</p>
+              <div class="photo-attribution"></div>
+            </div>
+          </article>
+
+          <article class="photo-card" data-place-id="" data-place-name="Kas Harbor Turkey" data-photo-max-height="720" data-fallback-image="assets/images/kas-harbor.jpg" data-fallback-credit="Arthur Shuraev on Pexels" data-fallback-credit-url="https://www.pexels.com/photo/aerial-view-of-buildings-marina-and-hills-on-the-shore-in-kas-turkey-17063308/">
+            <div class="photo-visual">
+              <div class="photo-placeholder">Kas harbor card for the slower Mediterranean stretch.</div>
+            </div>
+            <div class="photo-copy">
+              <h3>Kas Harbor Tone</h3>
+              <div class="photo-meta">
+                <span>Coastal shift</span>
+                <span>29 to 30 Apr</span>
+              </div>
+              <p>Use the harbor and marina view to signal the itinerary’s change from inland movement to sea-facing days.</p>
+              <div class="photo-attribution"></div>
+            </div>
+          </article>
+
+          <article class="photo-card" data-place-id="" data-place-name="Fethiye Marina Turkey" data-photo-max-height="720" data-fallback-image="assets/images/fethiye-marina.jpg" data-fallback-credit="fromsalih on Pexels" data-fallback-credit-url="https://www.pexels.com/photo/stunning-aerial-view-of-fethiye-scenic-bay-29878526/">
+            <div class="photo-visual">
+              <div class="photo-placeholder">Fethiye marina card for the final coast-and-flight transition.</div>
+            </div>
+            <div class="photo-copy">
+              <h3>Fethiye Return Coast</h3>
+              <div class="photo-meta">
+                <span>Final coast</span>
+                <span>1 to 2 May</span>
+              </div>
+              <p>This closes the sea section with a broader bay view before the route snaps back toward Istanbul and the return flights.</p>
+              <div class="photo-attribution"></div>
+            </div>
+          </article>
+        </div>
+      <div class="api-note">
+        These images now render with a public-photo fallback so the page stops feeling text-only. If you later add a restricted Google Maps API key and place IDs, the existing script can swap these cards to official Google place photos through Places API (New) / Place Photos.
+      </div>
+    </section>
+
+    <section class="section panel" id="flights">
+      <div class="section-header">
+        <div>
+          <h2>Flight Bookings</h2>
+        </div>
+        <p>Confirmed air sectors from the PDF itineraries.</p>
+      </div>
+      <div class="flight-grid">
+        <article class="flight-card">
+          <h3>Outbound Transit</h3>
+          <p>AirAsia booking reference <strong>YCTK6J</strong></p>
+          <div class="flight-route">
+            <div class="airport">
+              <strong>12:40 &bull; SGN</strong>
+              <span>Thu, 23 Apr 2026</span>
+              <span>Tan Son Nhat International Airport, Terminal 2</span>
+            </div>
+            <div class="arrow">&rarr;</div>
+            <div class="airport">
+              <strong>15:40 &bull; KUL</strong>
+              <span>Thu, 23 Apr 2026</span>
+              <span>Kuala Lumpur International Airport, Terminal 2</span>
+            </div>
+          </div>
+          <p>Flight <strong>AK 529</strong>, non-stop, 2h. Includes 20kg checked baggage, 7kg carry-on, water, seat <strong>20A</strong>.</p>
+          <div class="flight-tags">
+            <span class="tag">AirAsia</span>
+            <span class="tag">Economy Promo</span>
+            <span class="tag">20kg checked</span>
+            <span class="tag">7kg carry-on</span>
+          </div>
+        </article>
+
+        <article class="flight-card">
+          <h3>Return Transit</h3>
+          <p>AirAsia booking reference <strong>YCTK6J</strong></p>
+          <div class="flight-route">
+            <div class="airport">
+              <strong>19:35 &bull; KUL</strong>
+              <span>Mon, 4 May 2026</span>
+              <span>Kuala Lumpur International Airport, Terminal 2</span>
+            </div>
+            <div class="arrow">&rarr;</div>
+            <div class="airport">
+              <strong>20:40 &bull; SGN</strong>
+              <span>Mon, 4 May 2026</span>
+              <span>Tan Son Nhat International Airport, Terminal 2</span>
+            </div>
+          </div>
+          <p>Flight <strong>AK 524</strong>, non-stop, 2h 5m. Includes 20kg checked baggage, 7kg carry-on, meal, seat <strong>21A</strong>.</p>
+          <div class="flight-tags">
+            <span class="tag">AirAsia</span>
+            <span class="tag">Meal included</span>
+            <span class="tag">Premium Flex insurance</span>
+            <span class="tag">20kg checked</span>
+          </div>
+        </article>
+
+        <article class="flight-card">
+          <h3>KUL &rarr; Istanbul</h3>
+          <p>AirAsia booking reference <strong>AGLBQK</strong></p>
+          <div class="flight-route">
+            <div class="airport">
+              <strong>09:35 &bull; KUL</strong>
+              <span>Fri, 24 Apr 2026</span>
+              <span>Kuala Lumpur International Airport, Terminal 2</span>
+            </div>
+            <div class="arrow">&rarr;</div>
+            <div class="airport">
+              <strong>16:05 &bull; SAW</strong>
+              <span>Fri, 24 Apr 2026</span>
+              <span>Istanbul Sabiha Gokcen International Airport</span>
+            </div>
+          </div>
+          <p>Flight <strong>D7 604</strong>, non-stop, 11h 30m. Includes 20kg checked baggage, 7kg carry-on, seat <strong>39A</strong>.</p>
+          <div class="flight-tags">
+            <span class="tag">AirAsia X</span>
+            <span class="tag">Long-haul</span>
+            <span class="tag">20kg checked</span>
+            <span class="tag">Seat 39A</span>
+          </div>
+        </article>
+
+        <article class="flight-card">
+          <h3>Istanbul &rarr; KUL</h3>
+          <p>AirAsia booking reference <strong>AGLBQK</strong></p>
+          <div class="flight-route">
+            <div class="airport">
+              <strong>17:20 &bull; SAW</strong>
+              <span>Sun, 3 May 2026</span>
+              <span>Istanbul Sabiha Gokcen International Airport</span>
+            </div>
+            <div class="arrow">&rarr;</div>
+            <div class="airport">
+              <strong>08:40 &bull; KUL</strong>
+              <span>Mon, 4 May 2026</span>
+              <span>Kuala Lumpur International Airport, Terminal 2</span>
+            </div>
+          </div>
+          <p>Flight <strong>D7 605</strong>, non-stop, 10h 20m. Includes 20kg checked baggage, 7kg carry-on, seat <strong>39A</strong>.</p>
+          <div class="flight-tags">
+            <span class="tag">AirAsia X</span>
+            <span class="tag">Overnight flight</span>
+            <span class="tag">20kg checked</span>
+            <span class="tag">7kg cabin</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel" id="daily-schedule">
+      <div class="section-header">
+        <div>
+          <h2>Daily Schedule</h2>
+        </div>
+        <p>Day-by-day summary with estimated start and finish windows for each stop. Flight timings stay separate above; these charts focus on the local ground flow.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item" style="--delay: 1;" data-day-image="assets/images/kl-skyline.jpg" data-day-gallery="assets/images/kl-skyline.jpg|assets/images/istanbul-hagia-01.jpg|assets/images/istanbul-hagia-02.jpg" data-day-scene="Transit skyline reset" data-day-note="A soft Kuala Lumpur stopover before the long-haul leg to Turkey.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Ho Chi Minh City &rarr; Kuala Lumpur</h3>
+              <span class="date-badge">23 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: Chill Suites Kuala Lumpur</span>
+              <span>Flight day</span>
+              <span>Light city transit</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Arrival and transit night in Kuala Lumpur before the long-haul flight to Turkey. Best used for rest, light dinner, and organizing luggage for the next morning.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Airport movement and hotel timing after the flight lands.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">15:40 - 17:00</div><div class="flow-place"><strong>KUL arrival and immigration</strong><span>Land, collect bags, and clear the airport.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:00 - 18:00</div><div class="flow-place"><strong>Transfer to Chill Suites</strong><span>Approximate airport-to-city drive depending on traffic.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">18:00 - 21:30</div><div class="flow-place"><strong>Dinner and rest nearby</strong><span>Keep the evening soft and reset luggage for the 24 Apr departure.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Drive buffer: 45m to 1h</span>
+                  <span class="transfer-chip">Best use: early sleep</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 2;" data-day-image="assets/images/istanbul-hagia-02.jpg" data-day-gallery="assets/images/istanbul-hagia-02.jpg|assets/images/istanbul-hagia-01.jpg|assets/images/kas-harbor.jpg" data-day-scene="First Istanbul evening" data-day-note="Old-city stone, Bosphorus light, and a short first-night route after landing.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Kuala Lumpur &rarr; Istanbul</h3>
+              <span class="date-badge">24 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: EA Exclusive Hotel</span>
+              <span>Europe side highlights</span>
+              <span>Arrival evening</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Land at Istanbul Sabiha Gokcen, then explore the European side around Taksim and Galata.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Assumes direct transfer from SAW and a compact first-night city route.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">16:05 - 17:30</div><div class="flow-place"><strong>SAW arrival</strong><span>Immigration, baggage, SIM or cash, and airport pickup.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:30 - 18:45</div><div class="flow-place"><strong>Drive to Taksim / hotel area</strong><span>Airport-to-city transfer with evening traffic allowance.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">19:00 - 19:35</div><div class="flow-place"><strong>Taksim Square</strong><span>Quick first look and orientation walk.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">19:40 - 20:05</div><div class="flow-place"><strong>Dolmabahce Mosque</strong><span>Short exterior stop and Bosphorus edge photos.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">20:10 - 20:30</div><div class="flow-place"><strong>Hagia Triada Church</strong><span>Compact architectural stop near the Taksim area.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">20:30 - 21:30</div><div class="flow-place"><strong>Istiklal Street</strong><span>Walk, snacks, and city energy without a strict program.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">21:35 - 22:00</div><div class="flow-place"><strong>Galata Tower area</strong><span>End with skyline photos and head back before a late night.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Major drive: SAW to Taksim about 1h 15m</span>
+                  <span class="transfer-chip">Inner-city hops: 10m to 20m each</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 3;" data-day-image="assets/images/istanbul-hagia-01.jpg" data-day-gallery="assets/images/istanbul-hagia-01.jpg|assets/images/istanbul-hagia-02.jpg|assets/images/cappadocia-01.jpg" data-day-scene="Historic Istanbul core" data-day-note="Mosques, bazaars, and dense heritage streets in the old city.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Istanbul City Tour</h3>
+              <span class="date-badge">25 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: XLoft Hotel</span>
+              <span>Mosques &amp; bazaars</span>
+              <span>Old city focus</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Core old-city day focused on iconic mosques, bazaars, and Balat’s colorful streets.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Built as a mostly walkable day with short taxi transfers between districts.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">08:30 - 09:45</div><div class="flow-place"><strong>Hagia Sophia</strong><span>Start early to reduce queue pressure.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">09:50 - 10:35</div><div class="flow-place"><strong>Blue Mosque</strong><span>Short transfer or walk across Sultanahmet.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">11:00 - 12:30</div><div class="flow-place"><strong>Grand Bazaar</strong><span>Shopping and tea break in the covered market.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">13:00 - 14:00</div><div class="flow-place"><strong>Egyptian Bazaar</strong><span>Spice market and Eminonu area wandering.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">14:15 - 15:00</div><div class="flow-place"><strong>Suleymaniye viewpoint</strong><span>Panoramic stop before moving west.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">15:30 - 17:15</div><div class="flow-place"><strong>Balat colorful streets</strong><span>Photo walk, cafe stop, and softer end to the day.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Mostly walking</span>
+                  <span class="transfer-chip">Taxi between Eminonu and Balat: 20m to 25m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 4;" data-day-image="assets/images/cappadocia-01.jpg" data-day-gallery="assets/images/cappadocia-01.jpg|assets/images/cappadocia-02.jpg|assets/images/cappadocia-03.jpg" data-day-scene="Arrival into Cappadocia" data-day-note="Cave textures and valley formations as the route shifts inland.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Istanbul &rarr; Cappadocia</h3>
+              <span class="date-badge">26 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: Avlu Cave House</span>
+              <span>Arrival + first valley route</span>
+              <span>Road loop after flight</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Transition inland into Cappadocia and start with the valley-and-village loop.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Assumes you land earlier in the day and continue by rental car or arranged transfer.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">10:30 - 11:30</div><div class="flow-place"><strong>Cappadocia airport arrival and pickup</strong><span>Collect luggage, collect car, and begin the loop.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">12:00 - 13:00</div><div class="flow-place"><strong>Zelve Open Air Museum</strong><span>First major stop with cave formations and easy walking.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">13:10 - 14:00</div><div class="flow-place"><strong>Pasabag Valley</strong><span>Short drive from Zelve and classic fairy chimney views.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">14:20 - 15:30</div><div class="flow-place"><strong>Avanos Old Town</strong><span>Lunch, pottery streets, and a softer town stop.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">16:00 - 17:00</div><div class="flow-place"><strong>Atay Panorama area / check-in</strong><span>Reset before the evening activity.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:30 - 19:00</div><div class="flow-place"><strong>Horse riding at sunset</strong><span>Best placed after the main sightseeing loop.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Airport to Zelve: about 45m</span>
+                  <span class="transfer-chip">Zelve to Pasabag: 10m</span>
+                  <span class="transfer-chip">Pasabag to Avanos: 20m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 5;" data-day-image="assets/images/cappadocia-02.jpg" data-day-gallery="assets/images/cappadocia-02.jpg|assets/images/cappadocia-03.jpg|assets/images/cappadocia-04.jpg" data-day-scene="Balloon morning rhythm" data-day-note="The most iconic Cappadocia day, built around early sky views and panoramas.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Cappadocia Scenic Day</h3>
+              <span class="date-badge">27 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: Walnut House</span>
+              <span>Balloon morning</span>
+              <span>Classic viewpoints</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Main viewpoint day with the most classic Cappadocia landmarks, centered around the early balloon ride.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Early start, long scenic pauses, and short drives between viewpoints.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">05:00 - 07:30</div><div class="flow-place"><strong>Turquaz Balloon ride</strong><span>Pickup, briefing, flight, and drop-off.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">09:30 - 10:00</div><div class="flow-place"><strong>Devrent viewpoint</strong><span>Compact stop after breakfast and reset.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">10:20 - 10:50</div><div class="flow-place"><strong>Three Beauties</strong><span>Quick photo node with little walking.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">11:10 - 11:45</div><div class="flow-place"><strong>Ortahisar Panorama</strong><span>Castle-facing panorama and short break.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">13:00 - 14:00</div><div class="flow-place"><strong>Pigeon Valley</strong><span>Midday walk and sweeping rock formations.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">14:10 - 15:20</div><div class="flow-place"><strong>Uchisar Castle</strong><span>Main climb and wider valley views.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">18:15 - 19:15</div><div class="flow-place"><strong>Cappadocia sunset point</strong><span>Golden-hour finish before dinner.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Most drives: 15m to 25m</span>
+                  <span class="transfer-chip">Midday break recommended</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 6;" data-day-image="assets/images/cappadocia-03.jpg" data-day-gallery="assets/images/cappadocia-03.jpg|assets/images/cappadocia-04.jpg|assets/images/cappadocia-01.jpg" data-day-scene="Flexible valley loop" data-day-note="A broader Cappadocia driving circuit with photo stops and underground history.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Cappadocia Exploration</h3>
+              <span class="date-badge">28 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: Walnut House</span>
+              <span>Photos &amp; underground city</span>
+              <span>Flexible car day</span>
+            </div>
+            <div class="timeline-copy">
+              <p>A more flexible day mixing photo spots, shopping, and cultural stops.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>This is the broadest driving loop in Cappadocia, so buffer matters.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">06:00 - 07:30</div><div class="flow-place"><strong>Love Valley photo session</strong><span>Best kept early for light and optional vintage car setup.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">09:30 - 11:00</div><div class="flow-place"><strong>Soganli</strong><span>Longer transfer south for a quieter valley section.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">11:40 - 13:00</div><div class="flow-place"><strong>Kaymakli Underground City</strong><span>Main underground site and the most time-intensive stop.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">14:00 - 14:45</div><div class="flow-place"><strong>Galerie Ikman</strong><span>Carpet photo session or quick visual stop.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">15:00 - 16:30</div><div class="flow-place"><strong>Goreme shopping streets</strong><span>Recovery block after the southbound drive.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">18:00 - 19:00</div><div class="flow-place"><strong>Asiklar Tepesi viewpoint</strong><span>End-of-day overlook above Goreme.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Love Valley to Soganli: about 1h 15m</span>
+                  <span class="transfer-chip">Soganli to Kaymakli: about 30m</span>
+                  <span class="transfer-chip">Kaymakli back to Goreme: about 35m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 7;" data-day-image="assets/images/kas-harbor.jpg" data-day-gallery="assets/images/kas-harbor.jpg|assets/images/mediterranean-bay.jpg|assets/images/coastal-town.jpg" data-day-scene="Into the Mediterranean coast" data-day-note="A long inland-to-sea transfer ending with a much lighter coastal atmosphere.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Cappadocia &rarr; Kas</h3>
+              <span class="date-badge">29 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: DuruPduru Kas</span>
+              <span>Long transfer to coast</span>
+              <span>Major driving day</span>
+            </div>
+            <div class="timeline-copy">
+              <p>One of the longest movement days in the itinerary, shifting from inland rock landscapes to the Mediterranean coast.</p>
+              <div class="day-summary">
+                <div><strong>Approx. road time</strong><span>10h to 11h including fuel and food stops.</span></div>
+                <div><strong>Best departure</strong><span>Before 07:30 to protect the sunset window in Kas.</span></div>
+                <div><strong>Pace note</strong><span>Keep beach stops short if the road runs late.</span></div>
+              </div>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>This chart prioritizes realism for a heavy car day.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">05:45 - 06:30</div><div class="flow-place"><strong>Ask Vadisi / balloon watch</strong><span>Optional sunrise stop only if you still want a final Cappadocia moment.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">07:00 - 17:00</div><div class="flow-place"><strong>Drive Cappadocia to Kas</strong><span>Main overland transfer with 2 or 3 short breaks.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:15 - 17:45</div><div class="flow-place"><strong>Kucuk Cakil Plaji</strong><span>Quick first coastal stop near town.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">18:00 - 18:45</div><div class="flow-place"><strong>Limanagzi Plaji</strong><span>Short beach look if energy still holds.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">19:00 - 19:45</div><div class="flow-place"><strong>Kas town and check-in</strong><span>Hotel reset and dinner setup.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">19:50 - 20:30</div><div class="flow-place"><strong>Antiphellos Ancient City</strong><span>Sunset finish if arrival timing works.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Core drive: 9h 30m to 10h 30m</span>
+                  <span class="transfer-chip">Breaks: add 1h</span>
+                  <span class="transfer-chip">Kas local hops: 10m to 15m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 8;" data-day-image="assets/images/mediterranean-bay.jpg" data-day-gallery="assets/images/mediterranean-bay.jpg|assets/images/kas-harbor.jpg|assets/images/coastal-town.jpg" data-day-scene="Kas boat-day energy" data-day-note="Harbor movement, blue water, and island-hopping pace rather than road pace.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Kas Island Day</h3>
+              <span class="date-badge">30 Apr 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: DuruPduru Kas</span>
+              <span>10:00 - 17:00 boat day</span>
+              <span>Sea day</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Sea-focused day with island hopping, swimming, and town roaming.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Most movement happens by boat rather than car.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">08:30 - 09:45</div><div class="flow-place"><strong>Kas town roaming</strong><span>Breakfast, harbor walk, and boarding prep.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">10:00 - 12:00</div><div class="flow-place"><strong>Danamusa Koyu / Kekova route</strong><span>Boat segment with swimming stops.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">12:00 - 14:15</div><div class="flow-place"><strong>Kekova Adasi and Lycian Rock area</strong><span>Main scenic part of the day.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">14:15 - 17:00</div><div class="flow-place"><strong>Akvaryum Koyu and return cruise</strong><span>Swimming and slower return to the harbor.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:30 - 19:00</div><div class="flow-place"><strong>Kas old town evening</strong><span>Dinner and soft post-boat stroll.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Harbor transfer: walk or 5m taxi</span>
+                  <span class="transfer-chip">Boat day fixed: 10:00 to 17:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 9;" data-day-image="assets/images/oludeniz-lagoon.jpg" data-day-gallery="assets/images/oludeniz-lagoon.jpg|assets/images/fethiye-marina.jpg|assets/images/mediterranean-bay.jpg" data-day-scene="Oludeniz and Fethiye coast" data-day-note="The most active sea-and-air day, with coastal stops stacked close together.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Kas &rarr; Fethiye</h3>
+              <span class="date-badge">1 May 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: Ten Apart Hotel</span>
+              <span>Adventure day</span>
+              <span>Coastal car route</span>
+            </div>
+            <div class="timeline-copy">
+              <p>This is the most activity-heavy coastal day, with optional air and sea experiences.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Only keep every item if the paragliding slot is already fixed early.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">08:00 - 08:40</div><div class="flow-place"><strong>Kaputas Beach stop</strong><span>Short scenic pause before continuing north.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">10:15 - 12:30</div><div class="flow-place"><strong>Oludeniz paragliding block</strong><span>Includes briefing, ascent, flight, and landing buffer.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">12:30 - 13:00</div><div class="flow-place"><strong>Dragon Oludeniz photo stop</strong><span>Quick viewpoint before boarding the private boat.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">13:15 - 17:15</div><div class="flow-place"><strong>Blue Lagoon / Konul Plaji / Butterfly Valley</strong><span>Private boat segment across the major coastal spots.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:45 - 19:00</div><div class="flow-place"><strong>Fethiye cafes and roaming</strong><span>Check in and cool down after the activity block.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">19:00 - 20:00</div><div class="flow-place"><strong>Optional Babadag sunset</strong><span>Only realistic if the sea part ends on time.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Kas to Kaputas: 25m</span>
+                  <span class="transfer-chip">Kaputas to Oludeniz: about 1h 25m</span>
+                  <span class="transfer-chip">Oludeniz to central Fethiye: 25m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 10;" data-day-image="assets/images/fethiye-marina.jpg" data-day-gallery="assets/images/fethiye-marina.jpg|assets/images/istanbul-hagia-02.jpg|assets/images/kl-skyline.jpg" data-day-scene="Return to Istanbul waterside" data-day-note="A lighter re-entry day shaped around Bosphorus atmosphere and ferry time.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Fethiye &rarr; Istanbul</h3>
+              <span class="date-badge">2 May 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Hotel: USKUDAR OTEL</span>
+              <span>Asia side reset</span>
+              <span>Urban evening</span>
+            </div>
+            <div class="timeline-copy">
+              <p>A lighter city return day centered on the Asian side and sunset ferry atmosphere.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Flight details stay above; this shows the usable time after reaching Istanbul.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">13:00 - 14:15</div><div class="flow-place"><strong>Airport arrival and drive to Uskudar</strong><span>Includes baggage and hotel drop.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">14:30 - 16:00</div><div class="flow-place"><strong>Asia side shopping and roaming</strong><span>Keep it loose after the transfer day.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">16:25 - 17:00</div><div class="flow-place"><strong>Buyuk Mecidiye Mosque</strong><span>Short stop around Ortakoy if crossing back toward the water.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:20 - 18:00</div><div class="flow-place"><strong>Gulhane Park and Marmara Balik area</strong><span>Compact historic-core stop before sunset.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">18:20 - 19:20</div><div class="flow-place"><strong>Eminonu to Uskudar boat ride</strong><span>Best atmospheric finish for the return-to-city day.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Airport to Uskudar: about 1h</span>
+                  <span class="transfer-chip">Cross-city hops: 20m to 35m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 11;" data-day-image="assets/images/istanbul-hagia-02.jpg" data-day-gallery="assets/images/istanbul-hagia-02.jpg|assets/images/istanbul-hagia-01.jpg|assets/images/kl-skyline.jpg" data-day-scene="Final Istanbul morning" data-day-note="A last Asia-side landmark loop with enough buffer for the airport cutoff.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Istanbul Final Day &rarr; Kuala Lumpur</h3>
+              <span class="date-badge">3 May 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Flight from SAW</span>
+              <span>Asia side landmarks</span>
+              <span>Airport cutoff day</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Last Istanbul visit day before the evening flight out.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Designed to keep you on the Asia side and reach SAW without stress.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">08:30 - 09:45</div><div class="flow-place"><strong>Camlica Hill</strong><span>Panoramic morning start before traffic builds.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">10:05 - 11:00</div><div class="flow-place"><strong>Kuzguncuk Evleri</strong><span>Neighborhood walk and photo stop.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">11:20 - 12:20</div><div class="flow-place"><strong>Nakkastepe National Garden</strong><span>Green overlook and a quieter mid-morning block.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">12:35 - 13:35</div><div class="flow-place"><strong>Beylerbeyi Palace</strong><span>Final structured sightseeing stop.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">14:00 - 15:00</div><div class="flow-place"><strong>Hotel return and airport prep</strong><span>Pack, collect bags, and leave the city buffer intact.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">15:00 - 16:15</div><div class="flow-place"><strong>Drive to SAW</strong><span>Target airport arrival roughly two hours before departure.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">Asia-side hops: 15m to 25m</span>
+                  <span class="transfer-chip">Uskudar to SAW: about 1h to 1h 15m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item" style="--delay: 12;" data-day-image="assets/images/kl-skyline.jpg" data-day-gallery="assets/images/kl-skyline.jpg|assets/images/oludeniz-lagoon.jpg|assets/images/istanbul-hagia-01.jpg" data-day-scene="Connection day home" data-day-note="A low-energy transit day between the overnight flight and the last hop back to Ho Chi Minh City.">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Kuala Lumpur &rarr; Ho Chi Minh City</h3>
+              <span class="date-badge">4 May 2026</span>
+            </div>
+            <div class="timeline-meta">
+              <span>Homebound</span>
+              <span>Final flight</span>
+              <span>Transit connection</span>
+            </div>
+            <div class="timeline-copy">
+              <p>Arrival into Kuala Lumpur in the morning, then connect onward to Ho Chi Minh City in the evening.</p>
+              <div class="day-flow">
+                <div class="flow-header">
+                  <strong>Estimated day flow</strong>
+                  <span>Mostly a recovery and connection day between the long-haul and final hop home.</span>
+                </div>
+                <div class="flow-track">
+                  <div class="flow-node"><div class="flow-time">08:40 - 10:15</div><div class="flow-place"><strong>KUL arrival and connection reset</strong><span>Immigration, baggage, meal, and terminal re-entry.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">10:15 - 17:00</div><div class="flow-place"><strong>Airport buffer / lounge / nearby rest</strong><span>Low-energy day; keep the schedule intentionally open.</span></div></div>
+                  <div class="flow-node"><div class="flow-time">17:00 - 19:35</div><div class="flow-place"><strong>Check-in and final departure sequence</strong><span>Security, gate time, and final flight home.</span></div></div>
+                </div>
+                <div class="transfer-strip">
+                  <span class="transfer-chip">No city transfer needed unless you leave the airport zone</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel" id="stays">
+      <div class="section-header">
+        <div>
+          <h2>Stays &amp; Destinations</h2>
+        </div>
+        <p>Hotel sequence and what each stop is best for.</p>
+      </div>
+      <div class="stay-grid">
+        <article class="stay-card">
+          <h3>Kuala Lumpur</h3>
+          <p><strong>Chill Suites Kuala Lumpur</strong></p>
+          <ul>
+            <li>Transit rest before international long-haul</li>
+            <li>Best for an easy evening and luggage reset</li>
+          </ul>
+        </article>
+        <article class="stay-card">
+          <h3>Istanbul</h3>
+          <p><strong>EA Exclusive Hotel</strong> and <strong>XLoft Hotel</strong></p>
+          <ul>
+            <li>European side icons, bazaars, and architecture</li>
+            <li>Dense sightseeing days with walking</li>
+          </ul>
+        </article>
+        <article class="stay-card">
+          <h3>Cappadocia</h3>
+          <p><strong>Avlu Cave House</strong> and <strong>Walnut House</strong></p>
+          <ul>
+            <li>Balloon sunrise, valleys, caves, and viewpoints</li>
+            <li>Best zone for photos and early mornings</li>
+          </ul>
+        </article>
+        <article class="stay-card">
+          <h3>Kas</h3>
+          <p><strong>DuruPduru Kas</strong></p>
+          <ul>
+            <li>Coastline drives, ancient city sunset, boat day</li>
+            <li>Relaxed pace after Cappadocia transfers</li>
+          </ul>
+        </article>
+        <article class="stay-card">
+          <h3>Fethiye</h3>
+          <p><strong>Ten Apart Hotel</strong></p>
+          <ul>
+            <li>Adventure and sea day with optional paragliding</li>
+            <li>Blue Lagoon and Butterfly Valley access</li>
+          </ul>
+        </article>
+        <article class="stay-card">
+          <h3>Final Istanbul Stop</h3>
+          <p><strong>USKUDAR OTEL</strong></p>
+          <ul>
+            <li>Asia-side slowdown, shopping, and ferry sunset</li>
+            <li>Convenient mood for final city closeout</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel" id="prep">
+      <div class="section-header">
+        <div>
+          <h2>Important Items</h2>
+        </div>
+        <p>Practical preparation list inferred from the itinerary.</p>
+      </div>
+      <div class="prep-grid">
+        <article class="prep-card">
+          <h3>Documents</h3>
+          <ul>
+            <li>Passport with sufficient validity</li>
+            <li>Flight booking references: YCTK6J and AGLBQK</li>
+            <li>Hotel confirmations and transport screenshots</li>
+            <li>Travel insurance details and emergency contacts</li>
+            <li>Soft copies stored offline on phone</li>
+          </ul>
+        </article>
+        <article class="prep-card">
+          <h3>Packing</h3>
+          <ul>
+            <li>Layered outfits for city, coast, and early Cappadocia mornings</li>
+            <li>Comfortable walking shoes and one beach-friendly sandal</li>
+            <li>Modest clothing or scarf for mosque visits</li>
+            <li>Swimwear, sun hat, sunglasses, and compact towel</li>
+            <li>Power bank, universal adapter, and charging cable organizer</li>
+          </ul>
+        </article>
+        <article class="prep-card">
+          <h3>Useful Planning</h3>
+          <ul>
+            <li>Pre-book balloon ride, paragliding, and boat slots early</li>
+            <li>Keep a small day bag for flight and transfer days</li>
+            <li>Plan cash plus card for bazaars, ferries, and local shops</li>
+            <li>Expect quick repacking because of multiple hotel changes</li>
+            <li>Protect photo gear against dust, sea water, and long drives</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Turkey Tour 2026 &bull; Scenic itinerary page with daily movement estimates.
+    </footer>
+  </main>
+
+  <script>
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    function hydrateTimelineDayBanners() {
+      timelineItems.forEach((item) => {
+        const card = item.querySelector(".timeline-card");
+        const imageUrl = item.dataset.dayImage || "";
+        if (!card || !imageUrl || card.querySelector(".timeline-banner")) return;
+
+        const existingChildren = Array.from(card.childNodes);
+        const banner = document.createElement("div");
+        banner.className = "timeline-banner";
+        banner.style.backgroundImage = `url("${imageUrl}")`;
+
+        const bannerCopy = document.createElement("div");
+        bannerCopy.className = "timeline-banner-copy";
+
+        const scene = document.createElement("div");
+        scene.className = "timeline-scene";
+        const sceneTitle = document.createElement("strong");
+        sceneTitle.textContent = item.dataset.dayScene || "Day highlight";
+        scene.appendChild(sceneTitle);
+
+        if (item.dataset.dayNote) {
+          const sceneNote = document.createElement("span");
+          sceneNote.textContent = item.dataset.dayNote;
+          scene.appendChild(sceneNote);
+        }
+
+        bannerCopy.appendChild(scene);
+        banner.appendChild(bannerCopy);
+
+        const gallery = document.createElement("div");
+        gallery.className = "day-gallery";
+        const galleryImages = (item.dataset.dayGallery || "")
+          .split("|")
+          .map((value) => value.trim())
+          .filter(Boolean)
+          .slice(0, 3);
+
+        galleryImages.forEach((src, index) => {
+          const galleryCard = document.createElement("div");
+          galleryCard.className = "day-gallery-card";
+
+          const galleryImage = document.createElement("img");
+          galleryImage.src = src;
+          galleryImage.alt = `${item.dataset.dayScene || "Trip day"} detail ${index + 1}`;
+          galleryImage.loading = "lazy";
+          galleryCard.appendChild(galleryImage);
+          gallery.appendChild(galleryCard);
+        });
+
+        const inner = document.createElement("div");
+        inner.className = "timeline-card-inner";
+        existingChildren.forEach((child) => inner.appendChild(child));
+
+        if (galleryImages.length) {
+          card.replaceChildren(banner, gallery, inner);
+          return;
+        }
+
+        card.replaceChildren(banner, inner);
+      });
+    }
+
+    hydrateTimelineDayBanners();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = "running";
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    timelineItems.forEach((item) => {
+      item.style.animationPlayState = "paused";
+      observer.observe(item);
+    });
+
+    const tripPhotoCards = document.querySelectorAll(".photo-card");
+    const tripMapsConfig = window.TRIP_MAPS_CONFIG || {
+      apiKey: "",
+      places: {}
+    };
+
+    async function loadGoogleMapsPlacesLibrary(apiKey) {
+      if (!apiKey) return null;
+      if (window.google?.maps?.importLibrary) {
+        return window.google.maps.importLibrary("places");
+      }
+
+      await new Promise((resolve, reject) => {
+        const existing = document.querySelector("script[data-trip-maps-loader]");
+        if (existing) {
+          existing.addEventListener("load", resolve, { once: true });
+          existing.addEventListener("error", reject, { once: true });
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.dataset.tripMapsLoader = "true";
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&loading=async&libraries=places&v=weekly`;
+        script.async = true;
+        script.defer = true;
+        script.addEventListener("load", resolve, { once: true });
+        script.addEventListener("error", reject, { once: true });
+        document.head.appendChild(script);
+      });
+
+      if (!window.google?.maps?.importLibrary) return null;
+      return window.google.maps.importLibrary("places");
+    }
+
+    function applyFallbackImage(card) {
+      const fallbackImage = card.dataset.fallbackImage || "";
+      const fallbackCredit = card.dataset.fallbackCredit || "";
+      const fallbackCreditUrl = card.dataset.fallbackCreditUrl || "";
+      const visual = card.querySelector(".photo-visual");
+      const attribution = card.querySelector(".photo-attribution");
+      if (!visual || !fallbackImage) return;
+
+      visual.innerHTML = "";
+      const image = document.createElement("img");
+      image.src = fallbackImage;
+      image.alt = card.dataset.placeName || "Trip location photo";
+      image.loading = "lazy";
+      visual.appendChild(image);
+
+      if (!attribution) return;
+      attribution.innerHTML = "";
+
+      if (fallbackCredit && fallbackCreditUrl) {
+        attribution.append("Photo: ");
+        const link = document.createElement("a");
+        link.href = fallbackCreditUrl;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        link.textContent = fallbackCredit;
+        attribution.appendChild(link);
+        return;
+      }
+
+      if (fallbackCredit) {
+        attribution.textContent = `Photo: ${fallbackCredit}`;
+      }
+    }
+
+    async function hydrateTripPhotos() {
+      if (!tripPhotoCards.length) return;
+      if (!tripMapsConfig.apiKey) {
+        tripPhotoCards.forEach(applyFallbackImage);
+        return;
+      }
+
+      try {
+        const placesLib = await loadGoogleMapsPlacesLibrary(tripMapsConfig.apiKey);
+        if (!placesLib?.Place) {
+          tripPhotoCards.forEach(applyFallbackImage);
+          return;
+        }
+
+        for (const card of tripPhotoCards) {
+          const placeName = card.dataset.placeName || "";
+          const placeId = card.dataset.placeId || tripMapsConfig.places?.[placeName] || "";
+          if (!placeId) {
+            applyFallbackImage(card);
+            continue;
+          }
+
+          const place = new placesLib.Place({ id: placeId });
+          await place.fetchFields({ fields: ["displayName", "photos"] });
+          if (!place.photos?.length) {
+            applyFallbackImage(card);
+            continue;
+          }
+
+          const maxHeight = Number(card.dataset.photoMaxHeight || "720");
+          const photo = place.photos[0];
+          const imageUrl = photo.getURI({ maxHeight });
+          const visual = card.querySelector(".photo-visual");
+          const attribution = card.querySelector(".photo-attribution");
+          if (!visual) continue;
+
+          visual.innerHTML = "";
+          const image = document.createElement("img");
+          image.src = imageUrl;
+          image.alt = place.displayName || placeName || "Trip location photo";
+          visual.appendChild(image);
+
+          if (attribution) {
+            attribution.innerHTML = "";
+            const attributions = photo.authorAttributions || [];
+            if (attributions.length) {
+              attribution.textContent = "Photo attribution: ";
+              attributions.forEach((item, index) => {
+                const link = document.createElement("a");
+                link.href = item.uri;
+                link.target = "_blank";
+                link.rel = "noreferrer";
+                link.textContent = item.displayName;
+                attribution.appendChild(link);
+                if (index < attributions.length - 1) {
+                  attribution.appendChild(document.createTextNode(", "));
+                }
+              });
+            }
+          }
+        }
+      } catch (error) {
+        console.error("Trip photo hydration failed.", error);
+        tripPhotoCards.forEach(applyFallbackImage);
+      }
+    }
+
+    hydrateTripPhotos();
+  </script>
+</body>
+</html>
