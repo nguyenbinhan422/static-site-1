@@ -548,10 +548,23 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: linear-gradient(180deg, #86a9c7, #547596);
+      background: linear-gradient(180deg, #f9fbfe, #dfeaf4);
       box-shadow: 0 10px 20px rgba(73, 101, 133, 0.2);
       margin-top: 8px;
       border: 4px solid rgba(246, 249, 253, 0.95);
+      display: grid;
+      place-items: center;
+      color: var(--accent-deep);
+    }
+
+    .timeline-dot svg {
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .timeline-card {
@@ -1470,7 +1483,7 @@
         <p>Day-by-day summary with estimated start and finish windows for each stop. Flight timings stay separate above; these charts focus on the local ground flow.</p>
       </div>
       <div class="timeline">
-        <article class="timeline-item" style="--delay: 1;" data-day-image="assets/images/kl-skyline.jpg" data-day-gallery="assets/images/kl-skyline.jpg|assets/images/istanbul-hagia-01.jpg|assets/images/istanbul-hagia-02.jpg" data-day-scene="Transit skyline reset" data-day-note="A soft Kuala Lumpur stopover before the long-haul leg to Turkey.">
+        <article class="timeline-item" style="--delay: 1;" data-day-icon="departure" data-day-image="assets/images/kl-skyline.jpg" data-day-gallery="" data-day-scene="Transit skyline reset" data-day-note="A soft Kuala Lumpur stopover before the long-haul leg to Turkey.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1503,7 +1516,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 2;" data-day-image="assets/images/istanbul-hagia-02.jpg" data-day-gallery="assets/images/istanbul-hagia-02.jpg|assets/images/istanbul-hagia-01.jpg|assets/images/kas-harbor.jpg" data-day-scene="First Istanbul evening" data-day-note="Old-city stone, Bosphorus light, and a short first-night route after landing.">
+        <article class="timeline-item" style="--delay: 2;" data-day-icon="arrival" data-day-image="assets/images/taksim-square.jpg" data-day-gallery="assets/images/galata-tower.jpg" data-day-scene="First Istanbul evening" data-day-note="Taksim arrival energy, a compact Beyoglu sweep, and a first-night look toward Galata.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1540,7 +1553,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 3;" data-day-image="assets/images/istanbul-hagia-01.jpg" data-day-gallery="assets/images/istanbul-hagia-01.jpg|assets/images/istanbul-hagia-02.jpg|assets/images/cappadocia-01.jpg" data-day-scene="Historic Istanbul core" data-day-note="Mosques, bazaars, and dense heritage streets in the old city.">
+        <article class="timeline-item" style="--delay: 3;" data-day-icon="historic" data-day-image="assets/images/istanbul-hagia-01.jpg" data-day-gallery="assets/images/blue-mosque.jpg|assets/images/egyptian-bazaar.jpg|assets/images/balat-street.jpg" data-day-scene="Historic Istanbul core" data-day-note="Mosques, bazaars, and dense heritage streets in the old city.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1576,7 +1589,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 4;" data-day-image="assets/images/cappadocia-01.jpg" data-day-gallery="assets/images/cappadocia-01.jpg|assets/images/cappadocia-02.jpg|assets/images/cappadocia-03.jpg" data-day-scene="Arrival into Cappadocia" data-day-note="Cave textures and valley formations as the route shifts inland.">
+        <article class="timeline-item" style="--delay: 4;" data-day-icon="valley" data-day-image="assets/images/zelve-open-air.jpg" data-day-gallery="assets/images/pasabag-valley.jpg|assets/images/avanos-old-town.jpg|assets/images/ortahisar-castle.jpg" data-day-scene="Arrival into Cappadocia" data-day-note="Cave textures and valley formations as the route shifts inland.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1613,7 +1626,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 5;" data-day-image="assets/images/cappadocia-02.jpg" data-day-gallery="assets/images/cappadocia-02.jpg|assets/images/cappadocia-03.jpg|assets/images/cappadocia-04.jpg" data-day-scene="Balloon morning rhythm" data-day-note="The most iconic Cappadocia day, built around early sky views and panoramas.">
+        <article class="timeline-item" style="--delay: 5;" data-day-icon="balloon" data-day-image="assets/images/cappadocia-02.jpg" data-day-gallery="assets/images/devrent-valley.jpg|assets/images/ortahisar-castle.jpg|assets/images/pigeon-valley.jpg" data-day-scene="Balloon morning rhythm" data-day-note="The most iconic Cappadocia day, built around early sky views and panoramas.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1650,7 +1663,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 6;" data-day-image="assets/images/cappadocia-03.jpg" data-day-gallery="assets/images/cappadocia-03.jpg|assets/images/cappadocia-04.jpg|assets/images/cappadocia-01.jpg" data-day-scene="Flexible valley loop" data-day-note="A broader Cappadocia driving circuit with photo stops and underground history.">
+        <article class="timeline-item" style="--delay: 6;" data-day-icon="explore" data-day-image="assets/images/love-valley.jpg" data-day-gallery="assets/images/soganli-church.jpg|assets/images/goreme-aerial.jpg" data-day-scene="Flexible valley loop" data-day-note="A broader Cappadocia driving circuit with photo stops and underground history.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1687,7 +1700,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 7;" data-day-image="assets/images/kas-harbor.jpg" data-day-gallery="assets/images/kas-harbor.jpg|assets/images/mediterranean-bay.jpg|assets/images/coastal-town.jpg" data-day-scene="Into the Mediterranean coast" data-day-note="A long inland-to-sea transfer ending with a much lighter coastal atmosphere.">
+        <article class="timeline-item" style="--delay: 7;" data-day-icon="drive" data-day-image="assets/images/kas-harbor.jpg" data-day-gallery="assets/images/kas-harbor-alt.jpg|assets/images/coastal-town.jpg" data-day-scene="Into the Mediterranean coast" data-day-note="A long inland-to-sea transfer ending with a much lighter coastal atmosphere.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1729,7 +1742,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 8;" data-day-image="assets/images/mediterranean-bay.jpg" data-day-gallery="assets/images/mediterranean-bay.jpg|assets/images/kas-harbor.jpg|assets/images/coastal-town.jpg" data-day-scene="Kas boat-day energy" data-day-note="Harbor movement, blue water, and island-hopping pace rather than road pace.">
+        <article class="timeline-item" style="--delay: 8;" data-day-icon="boat" data-day-image="assets/images/kas-harbor-alt.jpg" data-day-gallery="assets/images/mediterranean-bay.jpg|assets/images/coastal-town.jpg" data-day-scene="Kas boat-day energy" data-day-note="Harbor movement, blue water, and island-hopping pace rather than road pace.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1764,7 +1777,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 9;" data-day-image="assets/images/oludeniz-lagoon.jpg" data-day-gallery="assets/images/oludeniz-lagoon.jpg|assets/images/fethiye-marina.jpg|assets/images/mediterranean-bay.jpg" data-day-scene="Oludeniz and Fethiye coast" data-day-note="The most active sea-and-air day, with coastal stops stacked close together.">
+        <article class="timeline-item" style="--delay: 9;" data-day-icon="coast" data-day-image="assets/images/kaputas-beach.jpg" data-day-gallery="assets/images/oludeniz-lagoon.jpg|assets/images/butterfly-valley.jpg|assets/images/fethiye-marina-alt.jpg" data-day-scene="Oludeniz and Fethiye coast" data-day-note="The most active sea-and-air day, with coastal stops stacked close together.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1801,7 +1814,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 10;" data-day-image="assets/images/fethiye-marina.jpg" data-day-gallery="assets/images/fethiye-marina.jpg|assets/images/istanbul-hagia-02.jpg|assets/images/kl-skyline.jpg" data-day-scene="Return to Istanbul waterside" data-day-note="A lighter re-entry day shaped around Bosphorus atmosphere and ferry time.">
+        <article class="timeline-item" style="--delay: 10;" data-day-icon="ferry" data-day-image="assets/images/ortakoy-mosque.jpg" data-day-gallery="assets/images/gulhane-park.jpg|assets/images/eminonu-ferry.jpg" data-day-scene="Return to Istanbul waterside" data-day-note="A lighter re-entry day shaped around Bosphorus atmosphere and ferry time.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1836,7 +1849,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 11;" data-day-image="assets/images/istanbul-hagia-02.jpg" data-day-gallery="assets/images/istanbul-hagia-02.jpg|assets/images/istanbul-hagia-01.jpg|assets/images/kl-skyline.jpg" data-day-scene="Final Istanbul morning" data-day-note="A last Asia-side landmark loop with enough buffer for the airport cutoff.">
+        <article class="timeline-item" style="--delay: 11;" data-day-icon="hill" data-day-image="assets/images/camlica-hill.jpg" data-day-gallery="assets/images/kuzguncuk-house.jpg|assets/images/beylerbeyi-palace.jpg|assets/images/beylerbeyi-gate.jpg" data-day-scene="Final Istanbul morning" data-day-note="A last Asia-side landmark loop with enough buffer for the airport cutoff.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -1872,7 +1885,7 @@
           </div>
         </article>
 
-        <article class="timeline-item" style="--delay: 12;" data-day-image="assets/images/kl-skyline.jpg" data-day-gallery="assets/images/kl-skyline.jpg|assets/images/oludeniz-lagoon.jpg|assets/images/istanbul-hagia-01.jpg" data-day-scene="Connection day home" data-day-note="A low-energy transit day between the overnight flight and the last hop back to Ho Chi Minh City.">
+        <article class="timeline-item" style="--delay: 12;" data-day-icon="home" data-day-image="assets/images/kl-skyline.jpg" data-day-gallery="" data-day-scene="Connection day home" data-day-note="A low-energy transit day between the overnight flight and the last hop back to Ho Chi Minh City.">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-top">
@@ -2011,13 +2024,37 @@
     </footer>
   </main>
 
-  <script>
-    const timelineItems = document.querySelectorAll(".timeline-item");
-    function hydrateTimelineDayBanners() {
-      timelineItems.forEach((item) => {
-        const card = item.querySelector(".timeline-card");
-        const imageUrl = item.dataset.dayImage || "";
-        if (!card || !imageUrl || card.querySelector(".timeline-banner")) return;
+    <script>
+      const timelineItems = document.querySelectorAll(".timeline-item");
+      const timelineIcons = {
+        departure: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18"></path><path d="M4 14l6-2 4-7 2 1-2 7 6 2-1 2-7-1-3 3h-2l1-4-4-1z"></path></svg>',
+        arrival: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"></path><path d="M7 8l5-5 5 5"></path><path d="M5 18h14"></path></svg>',
+        historic: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"></path><path d="M6 20V10"></path><path d="M10 20V10"></path><path d="M14 20V10"></path><path d="M18 20V10"></path><path d="M3 10h18"></path><path d="M12 4l9 4H3l9-4z"></path></svg>',
+        valley: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18l5-7 4 4 4-6 5 9"></path><path d="M3 18h18"></path></svg>',
+        balloon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.3 0-6 2.9-6 6.4 0 4.1 3.1 7.1 6 8.6 2.9-1.5 6-4.5 6-8.6C18 5.9 15.3 3 12 3z"></path><path d="M9.5 16h5"></path><path d="M10.5 16l-.8 3h4.6l-.8-3"></path></svg>',
+        explore: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M14.8 9.2l-2 5-5 2 2-5 5-2z"></path></svg>',
+        drive: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16l1.5-5h11L19 16"></path><path d="M4 16h16"></path><circle cx="7" cy="17.5" r="1.5"></circle><circle cx="17" cy="17.5" r="1.5"></circle></svg>',
+        boat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15h14l-2 3H7l-2-3z"></path><path d="M9 15V8h6v7"></path><path d="M12 8V5"></path></svg>',
+        coast: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c1.2 0 1.8-1 3-1s1.8 1 3 1 1.8-1 3-1 1.8 1 3 1 1.8-1 3-1 1.8 1 3 1"></path><path d="M7 13l3-4 3 2 4-5"></path></svg>',
+        ferry: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15h14l-2 3H7l-2-3z"></path><path d="M8 15V9h8v6"></path><path d="M3 20c1.2 0 1.8-1 3-1s1.8 1 3 1 1.8-1 3-1 1.8 1 3 1 1.8-1 3-1 1.8 1 3 1"></path></svg>',
+        hill: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18l6-8 4 5 3-3 5 6"></path><path d="M15 7h4v4"></path><path d="M19 7l-5 5"></path></svg>',
+        home: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6"></path><path d="M6 10.5V19h12v-8.5"></path><path d="M10 19v-5h4v5"></path></svg>'
+      };
+
+      function hydrateTimelineIcons() {
+        timelineItems.forEach((item) => {
+          const dot = item.querySelector(".timeline-dot");
+          const icon = timelineIcons[item.dataset.dayIcon || "explore"];
+          if (!dot || !icon) return;
+          dot.innerHTML = icon;
+        });
+      }
+
+      function hydrateTimelineDayBanners() {
+        timelineItems.forEach((item) => {
+          const card = item.querySelector(".timeline-card");
+          const imageUrl = item.dataset.dayImage || "";
+          if (!card || !imageUrl || card.querySelector(".timeline-banner")) return;
 
         const existingChildren = Array.from(card.childNodes);
         const banner = document.createElement("div");
@@ -2072,10 +2109,11 @@
         }
 
         card.replaceChildren(banner, inner);
-      });
-    }
+        });
+      }
 
-    hydrateTimelineDayBanners();
+      hydrateTimelineIcons();
+      hydrateTimelineDayBanners();
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
